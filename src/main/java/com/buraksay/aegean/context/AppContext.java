@@ -17,7 +17,7 @@ public abstract class AppContext {
     public static ApplicationContext getApplicationContext() {
 
         if (appContext == null) {
-            appContext = new ClassPathXmlApplicationContext("context.xml");
+            appContext = new ClassPathXmlApplicationContext("spring-context.xml");
         }
 
         return appContext;

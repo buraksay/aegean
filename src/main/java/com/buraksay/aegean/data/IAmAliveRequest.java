@@ -1,5 +1,8 @@
 package com.buraksay.aegean.data;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class IAmAliveRequest {
     private String tid;
     private String nonce;

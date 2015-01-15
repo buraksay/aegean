@@ -7,19 +7,19 @@
     <appender name="aegeanlog" class="ch.qos.logback.core.FileAppender">
         <file>${user.dir}/logs/aegean.log</file>
         <encoder>
-            <Pattern>%n%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} %n%msg%n</Pattern>
+            <Pattern>%n%d{yyyy-MM-dd HH:mm:ss} %-4level [%logger{36}] %msg</Pattern>
         </encoder>
     </appender>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <!-- encoders are by default assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
         <encoder>
-            <Pattern>%n%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} %n%msg%n</Pattern>
+            <Pattern>%n%d{yyyy-MM-dd HH:mm:ss} %-4level [%logger{36}] %msg</Pattern>
         </encoder>
     </appender>
 
     <logger name="com.buraksay.aegean" level="debug" additivity="false">
-        <appender-ref ref="aegeanlog" />
+        <appender-ref ref="STDOUT" />
     </logger>
 
     <root level="debug">
